@@ -11,20 +11,29 @@ with open(budget_csv, newline="") as csvfile:
     csv_header = next(csvfile)
 
 #Define lists to be utilized    
-    profit_loss = []
-    date = []
+    #profit_loss = []
+    #date = []
 #Populate lists with data from csv file   
-    for row in csvreader:
-        profit_loss.append(int(row[1]))
-        date.append(row[0])
+    #for row in csvreader:
+        #profit_loss.append(int(row[1]))
+        #date.append(row[0])
+#Revised to utilize list comprehension
+    profit_loss = [int(row[1]) for row in csvreader]
+        
+with open(budget_csv, newline="") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    csv_header = next(csvfile)       
+        
+    date = [row[0] for row in csvreader]
+
 
 #Calculate the change in profit / loss and write the result to list Change
 #change = []
 #for i in range(1, len(profit_loss)):
     #change.append(profit_loss[i]-profit_loss[i-1])
-#Revise to use comprehension
+#Revise to use list comprehension
 change = [profit_loss[i+1] - profit_loss[i] for i in range(len(profit_loss)-1)]
-print(change)
+
 
 #Use variables to simplify outut
 max_profit = (max(change))

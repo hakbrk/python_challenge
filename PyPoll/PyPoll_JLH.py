@@ -11,9 +11,11 @@ with open(election_data, newline="") as csvfile:
     csv_header = next(csvfile)
 
 #Create a Cadidate list for further data analysis    
-    candidate = []
-    for row in csvreader:
-        candidate.append(row[2])
+    #candidate = []
+    #for row in csvreader:
+        #candidate.append(row[2])
+#Revised to utilize list comprehension
+    candidate = [row[2] for row in csvreader]
 #Pass total_votes value to variable by using len of list candidate
 total_votes = (len(candidate))
 
