@@ -10,4 +10,4 @@ This repository contains three project utilizing Python.
  - PyBoss - I was given an employee data file in csv format and asked to modifiy the data to suit the requested format.
 
 ## Acknowledgments
-The dictionary utilized in the PyBoss code was copied from git hub user afhaque.  I was unable to figure out a way to open and use the py file from within my code so I copied and pasted his dictionary into my code.
+The dictionary utilized in the PyBoss code was copied from git hub user afhaque and found at https://gist.github.com/afhaque/29f0f4f37463c447770517a6c17d08f5.  I was unable to figure out a way to open and use the py file from within my code so I copied and pasted his dictionary into my code.
